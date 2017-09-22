@@ -26,9 +26,23 @@ __END__
 
 =head1 NAME
 
-Test2::Formatter::CompactTimer - Blah blah blah
+Test2::Formatter::CompactTimer - a Test2::Harness formatter with compat timer
 
 =head1 SYNOPSIS
+
+Before:
+
+    ❯ yath test -T -j4 xt
+    ( PASSED )  job  4    xt/04_version.t
+    (  TIME  )  job  4    0.02574s on wallclock (0.04 usr 0.00 sys + 0.00 cusr 0.00 csys = 0.04 CPU)
+    ( PASSED )  job  3    xt/03_resolver.t
+    (  TIME  )  job  3    0.10589s on wallclock (0.06 usr 0.01 sys + 0.00 cusr 0.00 csys = 0.07 CPU)
+    ( PASSED )  job  1    xt/01_installer.t
+    (  TIME  )  job  1    0.62809s on wallclock (0.28 usr 0.05 sys + 0.16 cusr 0.03 csys = 0.52 CPU)
+    ( PASSED )  job  2    xt/02_installer.t
+    (  TIME  )  job  2    0.63892s on wallclock (0.28 usr 0.05 sys + 0.17 cusr 0.03 csys = 0.53 CPU)
+
+With Test2::Formatter::CompactTimer:
 
     ❯ yath test -T --formatter CompactTimer -j4 xt
     ( PASSED )  job  4      0.033s xt/04_version.t
@@ -36,24 +50,6 @@ Test2::Formatter::CompactTimer - Blah blah blah
     ( PASSED )  job  1      0.669s xt/01_installer.t
     ( PASSED )  job  2      0.681s xt/02_installer.t
     ( PASSED )  job  7      5.874s xt/12_range.t
-    ( PASSED )  job  8      6.398s xt/13_git.t
-    ( PASSED )  job 10      3.811s xt/15_snapshot.t
-    ( PASSED )  job  9      4.693s xt/14_perl_req.t
-    ( PASSED )  job 11      1.546s xt/16_cpanfile_v.t
-    ( PASSED )  job  6     14.480s xt/11_target_perl.t
-    ( PASSED )  job  5     16.076s xt/10_basic.t
-    ( PASSED )  job 12      6.512s xt/17_cpanfile.t
-    ( PASSED )  job 13      6.467s xt/20_dev.t
-    ( PASSED )  job 17      0.265s xt/24_core.t
-    ( PASSED )  job 18      0.654s xt/25_static_install.t
-    ( PASSED )  job 19      1.507s xt/26_retry.t
-    ( PASSED )  job 15      6.507s xt/22_toolchain.t
-    ( PASSED )  job 16      7.381s xt/23_same_module.t
-    ( PASSED )  job 14     11.466s xt/21_resolver_option.t
-    ( PASSED )  job 20      6.444s xt/27_with_without.t
-    ( PASSED )  job 21      5.317s xt/28_timeout.t
-    ( PASSED )  job 22      2.281s xt/30_prebuilt.t
-    ( PASSED )  job 23      1.759s xt/31_circular_dep.t
 
 =head1 DESCRIPTION
 

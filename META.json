@@ -1,5 +1,5 @@
 {
-   "abstract" : "Blah blah blah",
+   "abstract" : "a Test2::Harness formatter with compat timer",
    "author" : [
       "Shoichi Kaji <skaji@cpan.org>"
    ],
